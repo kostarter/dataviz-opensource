@@ -1,0 +1,11 @@
+Superset : Faire un hello world.
+Kibana : Dataset sample.
+PowerBI : Associer avec redshift.
+D3.js : Faire une démo, un test de visualisation.
+
+Aller sur slideshare
+
+Tout installer et tout tester sur une :
+t2.micro ou une t2.medium
+
+Des exercises de manipulation : visualization, affichage, etc...
