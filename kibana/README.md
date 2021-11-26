@@ -1,6 +1,6 @@
 # Kibana
 
-⚠️ A traduire en Anglais !<br/>
+⚠️ Introduction à traduire en Anglais !<br/>
 
 Une application Web qui se branche sur un custer elasticsearch.<br/>
 Elle permet de faire tout ce qui est possible de faire via l'API REST c'est à dire des recherches, des aggrégations mais aussi de créer des diagrammes de visualisation et des dashboards. Elle permet aussi de monitorer le cluster.<br/>
