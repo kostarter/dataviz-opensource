@@ -56,9 +56,14 @@ export SUPERSET_CONFIG_PATH=/home/ec2-user/.superset/superset_config.py
 nano /home/ec2-user/.superset/superset_config.py
 PREVENT_UNSAFE_DB_CONNECTIONS = False
 ```
+Launch Apache Superset :
+```console sbtshell
+superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger
+```
+⚠️ Apache Superset is launched on port 8088
 
 URL to use in Superset to import the SQLite database :<br/>
-sqlite:////home/ec2-user/chihookdb
+> sqlite:////home/ec2-user/chihookdb
 
 1. On importe une base de données.
 
