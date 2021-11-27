@@ -1,6 +1,6 @@
 # Power BI :
 
-Power BI is the all new Microsoft Business Intelligence and Data Analysis tool.
+Power BI is Microsoft's Business Intelligence and Data Analysis tool.
 It is an indispensable business analytics that facilitates effective visualization and analysis of data.
 Microsoft Power BI is completely free tool, that provides effective analyzing,visualizingand sharing of data targeted for non-technical business users.
 
