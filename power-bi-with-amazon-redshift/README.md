@@ -18,12 +18,6 @@ A Power BI dashboard is a single page, often called a canvas, that tells a story
 * Query Editor :
 Query Editor is one of the tools in Power BI Desktop that opens in a separate window. In this you can transform data with queries and then create reports with that superior data model into business intelligent tool Power BI Desktop.
 
-
-### Connect to an Amazon Redshift database in Power BI Desktop
-
-https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
-
-
 ### Amazon Redshift :
 
 Fully managed, petabyte-scale data warehouse service in the cloud.
@@ -86,3 +80,49 @@ Make it accessible from outside :
 <img src="img/03_screenshot_from_2021-11-23_18-19-20.png"/>
 </p>
 
+### Connect to an Amazon Redshift database in Power BI Desktop
+
+https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
+
+Server :
+> redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439/dev
+
+Database :
+> dev
+
+And use the credentials previously mentionned.
+
+1. Launch Power BI Desktop
+2. If you haven’t already, sign in to the Service with your Power BI credentials
+3. Select Home > Get Data > More > Database > Amazon Redshift
+4. Click Connect
+5. On the next screen, provide the following values:
+Server – copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br/>
+Database – dev (or whatever name you gave for the database)<br/>
+Data Connectivity Mode – DirectQuery<br/>
+6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.
+7. Select the orders, lineitem, and part tables from the Navigator window and then click Load.
+8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br/>
+In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br/>
+Create relationships between the tables by dragging and dropping the following columns on each other.<br/>
+> o_orderkey = lineitem.l_orderkey<br/>
+> p_partkey = lineitem.l_partkey<br/>
+9. Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report.
+
+Date Slicer<br/>
+> Visualization type – Slicer<br/>
+> Field – orders.o_orderdate<br/>
+
+Sales by Date by Manufacturer<br/>
+> Visualization type – Line Chart<br/>
+> Axis – orders.o_orderdate<br/>
+> Legend – part.p_mfgr<br/>
+> Values – lineitem.l_extendedprice<br/>
+
+Order Count<br/>
+> Visualization type – Card<br/>
+> Fields – Count of orders.o_orderkey<br/>
+
+Line Item Count<br/>
+> Visualization type – Card<br/>
+> Fields – Count of lineitem.l_linenumber<br/>
