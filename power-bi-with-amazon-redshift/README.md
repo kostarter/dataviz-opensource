@@ -90,7 +90,7 @@ Make it accessible from outside :
 https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
 
 Server :
-> redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439/dev
+> redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439
 
 Database :
 > dev
