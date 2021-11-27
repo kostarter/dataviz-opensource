@@ -99,22 +99,22 @@ And use the credentials previously mentionned.
 
 ## Let's play with Power BI :
 
-1. Launch Power BI Desktop
-2. If you haven’t already, sign in to the Service with your Power BI credentials
-3. Select Home > Get Data > More > Database > Amazon Redshift
-4. Click Connect
-5. On the next screen, provide the following values:
+1. Launch Power BI Desktop. 
+2. If you haven’t already, sign in to the Service with your Power BI credentials. 
+3. Select Home > Get Data > More > Database > Amazon Redshift. 
+4. Click Connect. 
+5. On the next screen, provide the following values:  
 Server – copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br/>
 Database – dev (or whatever name you gave for the database)<br/>
 Data Connectivity Mode – DirectQuery<br/>
-6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.
-7. Select the orders, lineitem, and part tables from the Navigator window and then click Load.
-8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br/>
-In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br/>
-Create relationships between the tables by dragging and dropping the following columns on each other.<br/>
-> o_orderkey = lineitem.l_orderkey<br/>
-> p_partkey = lineitem.l_partkey<br/>
-9. Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report.
+6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.  
+7. Select the orders, lineitem, and part tables from the Navigator window and then click Load.  
+8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br/>. 
+In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br/>. 
+Create relationships between the tables by dragging and dropping the following columns on each other.<br/>. 
+> o_orderkey = lineitem.l_orderkey<br/>. 
+> p_partkey = lineitem.l_partkey<br/>. 
+9. Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report.  
 
 Date Slicer<br/>
 > Visualization type – Slicer<br/>
