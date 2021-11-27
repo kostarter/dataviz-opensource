@@ -128,3 +128,7 @@ Order Count<br/>
 Line Item Count<br/>
 > Visualization type – Card<br/>
 > Fields – Count of lineitem.l_linenumber<br/>
+
+<p align="center">
+<img src="img/2021-11-27_011640.png"/>
+</p>
