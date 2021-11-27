@@ -108,8 +108,11 @@ Server – copy the value of the key [RedshiftClusterEndpoint], which is found i
 Database – dev (or whatever name you gave for the database)<br>
 Data Connectivity Mode – DirectQuery<br><br>
 6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.<br><br>  
-7. Select the orders, lineitem, and part tables from the Navigator window and then click Load.<br><br>  
-8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br><br>
+7. Select the following tables from the Navigator window and then click **Load**.<br><br>  
+   -  orders
+   -  lineitem
+   -  part <br><br>
+9. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br><br>
 In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br><br> 
 Create relationships between the tables by dragging and dropping the following columns on each other.<br> 
 > o_orderkey = lineitem.l_orderkey<br> 
