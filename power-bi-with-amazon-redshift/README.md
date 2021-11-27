@@ -26,7 +26,9 @@ It is the fastest cloud data warehouse available.
 ###### AQUA : Advanced Query Accelerator.
 New distributed and hardware accelerated cache that allows Redshift to run up to 10x faster than any other cloud data warehouse.
 
-![Redshift](https://media.amazonwebservices.com/blog/2021/rs_aqua_rainbow_2.png)
+<p align="center">
+<img src="https://media.amazonwebservices.com/blog/2021/rs_aqua_rainbow_2.png"/>
+</p>
 
 https://aws.amazon.com/blogs/aws/new-aqua-advanced-query-accelerator-for-amazon-redshift/
 
@@ -40,8 +42,11 @@ Redshift makes it simple and cost effective to run high performance queries on p
 * Operational analytics on business events :
 Bring together structurd data from your data warehouse and semi-structured data such as application logs from your S3 data lake to get real-time operational insights on your application and systems.
 
-###### Datawarehouse Architecture (Premier schéma) :
-![Redshift](https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png)
+###### Datawarehouse Architecture :
+
+<p align="center">
+<img src="https://docs.aws.amazon.com/redshift/latest/dg/images/02-NodeRelationships.png"/>
+</p>
 
 https://docs.aws.amazon.com/redshift/latest/dg/c_high_level_system_architecture.html
 
