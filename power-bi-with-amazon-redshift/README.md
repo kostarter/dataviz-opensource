@@ -99,13 +99,13 @@ And use the credentials previously mentionned.
 
 ## Let's play with Power BI :
 
-1. Launch Power BI Desktop. 
-2. If you haven’t already, sign in to the Service with your Power BI credentials. 
-3. Select Home > Get Data > More > Database > Amazon Redshift. 
-4. Click Connect. 
-5. On the next screen, provide the following values:  
-Server – copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br><br>
-Database – dev (or whatever name you gave for the database)<br><br>
+1. Launch Power BI Desktop. <br><br>
+2. If you haven’t already, sign in to the Service with your Power BI credentials. <br><br>
+3. Select Home > Get Data > More > Database > Amazon Redshift. <br><br>
+4. Click Connect. <br><br>
+5. On the next screen, provide the following values:  <br><br>
+Server – copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br>
+Database – dev (or whatever name you gave for the database)<br>
 Data Connectivity Mode – DirectQuery<br><br>
 6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.<br><br>  
 7. Select the orders, lineitem, and part tables from the Navigator window and then click Load.<br><br>  
