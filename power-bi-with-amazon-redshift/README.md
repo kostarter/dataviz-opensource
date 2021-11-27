@@ -99,7 +99,7 @@ And use the credentials previously mentionned.
 
 ## Let's play with Power BI :
 
-1. Launch Power BI Desktop. <br><br>
+1. Launch Power BI Desktop **As an Administrator**. <br><br>
 2. If you haven’t already, sign in to the Service with your Power BI credentials. <br><br>
 3. Select Home > Get Data > More > Database > Amazon Redshift. <br><br>
 4. Click Connect. <br><br>
