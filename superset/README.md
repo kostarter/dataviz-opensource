@@ -69,7 +69,7 @@ There are 11 tables in the chinook sample database :
 
 * **employees** table stores employees data such as employee id, last name, first name, etc. It also has a field named ReportsTo to specify who reports to whom.
 * **customers** table stores customers data.
-* **invoices** & invoice_items tables: these two tables store invoice data. The invoices table stores invoice header data and the invoice_items table stores the invoice line items data.
+* **invoices** & **invoice_items** tables: these two tables store invoice data. The invoices table stores invoice header data and the invoice_items table stores the invoice line items data.
 * **artists** table stores artists data. It is a simple table that contains only the artist id and name.
 * **albums** table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums.
 * **media_types** table stores media types such as MPEG audio and AAC audio files.
@@ -82,6 +82,8 @@ There are 11 tables in the chinook sample database :
 wget https://www.sqlitetutorial.net/wp-content/uploads/2018/03/chinook.zip
 unzip chinook.zip
 ```
+
+The sample database file is ZIP format, therefore, you need to extract it to a folder, for example, C:\sqlite\db. The name of the file is **chinook.db**.
 
 #####  SQLite Commands :
 https://www.sqlitetutorial.net/sqlite-commands/
@@ -131,7 +133,7 @@ Once the request is done, explore the result and export it as a dataset with the
 <img src="img/screenshot_from_2021-11-25_16-08-30.png"/>
 </p>
 
-Now we can see the list of dataset within the **Datasets** pane in the the **Data** section :
+Now we can see the list of the existing datasets within the **Datasets** pane in the the **Data** section :
 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_15-20-43.png"/>
@@ -152,7 +154,7 @@ Click on **VISUALIZE TYPE** and select **Bar Chart** :
 
 Now configure the chart by setting :
 * The metrics as the Number of albums.
-* The series as The name of the artists. 
+* The series as the Name of the artists. 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-10-38.png"/>
 </p>
@@ -162,34 +164,58 @@ Visualize the chart and save it by clicking on **+ SAVE** :
 <img src="img/screenshot_from_2021-11-25_16-10-44.png"/>
 </p>
 
-4. Create a pie chart to visualize the distribution of the invoices by countries : 
+4. Create a pie chart to visualize the distribution of the invoices by countries :
+
+Choose the dataset for the chart : **main.invoices**.<br/>
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-11-19.png"/>
 </p>
+
+Select the type of the chart :
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-12-12.png"/>
 </p>
+
+Now configure the chart by setting :
+* The aggregation **GROUP BY** as the Billing country.
+* The metric as the count of the invoices. 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-12-35.png"/>
 </p>
+
+Visualize the chart and save it by clicking on **+ SAVE** :
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-12-46.png"/>
 </p>
+
+5. Create a dashbord with the previously created charts :
+Go to the Dashboards pane and create a new dashboard by clicking on the button **+ DASHBOARD**.
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-13-50.png"/>
 </p>
+
+From the **CHARTS** tab in the right panel, drag the charts to drop on the dashboard.<br/>
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-14-12.png"/>
 </p>
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-14-51.png"/>
 </p>
+
+6. Create a map chart to visualize the distribution of invoices in the world :
+Select the dataset **main.invoices** when creating the chart and select **World Map** chart.
+
+Now configure the chart by setting :
+* The country column as the Billing country.
+* The country field type as the Full name of the country.
+* The metric as the count of the invoices.
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-56-09.png"/>
 </p>
-<p align="center">
-<img src="img/screenshot_from_2021-11-25_21-52-05.png"/>
-</p>
+
+7. Create a line chart to visualize the evolution of births by in the world since 1965.<br/>
+First show the complete evolution then split by gender.<br/>
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_23-15-47.png"/>
 </p>
