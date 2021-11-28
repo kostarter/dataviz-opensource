@@ -50,7 +50,7 @@ superset init
 
 ### SQLite :
 
-QLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.<br/>
+SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.<br/>
 It is embeded wihthin Apache Superset.
 
 ##### Data sample :
