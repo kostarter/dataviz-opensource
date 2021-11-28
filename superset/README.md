@@ -40,9 +40,6 @@ superset load_examples
 
 # Create default roles and permissions
 superset init
-
-# To start a development web server on port 8088, use -p to bind to another port
-superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger
 ```
 
 ## Part Two : Practice
@@ -53,69 +50,119 @@ superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger
 
 ### SQLite :
 
-Embeded wihthin Apache Superset :
+QLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.<br/>
+It is embeded wihthin Apache Superset.
 
-Data sample :
-https://www.sqlitetutorial.net/sqlite-sample-database/
+##### Data sample :
+
+We provide you with the SQLite sample database named chinook. The chinook sample database is a good database for practicing with SQL, especially SQLite.
+
+The following database diagram illustrates the chinook database tables and their relationships.
+
+<p align="center">
+<img src="https://www.sqlitetutorial.net/wp-content/uploads/2015/11/sqlite-sample-database-color.jpg"/>
+</p>
+
+##### Chinook sample database tables :
+
+There are 11 tables in the chinook sample database :
+
+* **employees** table stores employees data such as employee id, last name, first name, etc. It also has a field named ReportsTo to specify who reports to whom.
+* **customers** table stores customers data.
+* **invoices** & invoice_items tables: these two tables store invoice data. The invoices table stores invoice header data and the invoice_items table stores the invoice line items data.
+* **artists** table stores artists data. It is a simple table that contains only the artist id and name.
+* **albums** table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums.
+* **media_types** table stores media types such as MPEG audio and AAC audio files.
+* **genres** table stores music types such as rock, jazz, metal, etc.
+* **tracks** table stores the data of songs. Each track belongs to one album.
+* **playlists** & **playlist_track** tables: playlists table store data about playlists. Each playlist contains a list of tracks. Each track may belong to multiple playlists. The relationship between the playlists table and tracks table is many-to-many. The playlist_track table is used to reflect this relationship.
+
+##### To download the dataset :
 ```console sbtshell
 wget https://www.sqlitetutorial.net/wp-content/uploads/2018/03/chinook.zip
+unzip chinook.zip
 ```
 
 #####  SQLite Commands :
 https://www.sqlitetutorial.net/sqlite-commands/
 
-Make databases accessible from Superset :
+##### Make databases accessible from Superset :
 ```console sbtshell
 export SUPERSET_CONFIG_PATH=/home/ec2-user/.superset/superset_config.py
 
 nano /home/ec2-user/.superset/superset_config.py
 PREVENT_UNSAFE_DB_CONNECTIONS = False
 ```
-Launch Apache Superset :
+⚠️ Do not do this in a production environment.
+
+##### Launch Apache Superset :
+To start a development web server on port 8088, use -p to bind to another port :
 ```console sbtshell
 superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger
 ```
-⚠️ Apache Superset is launched on port 8088
+Apache Superset is launched on port 8088 :heavy_check_mark: <br/>
+> http://EC2_INSTANCE_PUBLIC_IP/8088
 
+#####  Import the database into Apache Superset :
 URL to use in Superset to import the SQLite database :<br/>
 > sqlite:////home/ec2-user/chihookdb
-
-1. On importe une base de données.
-
-2. Pour créer des charts :
-* Option 1 : On importe un dataset à partir d'une table.
-* Option 2 : Créer un dataset à partir d'une requête SQL.
 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_15-18-31.png"/>
 </p>
+
+##### Create datasets :
+To create charts in Apache Superset it is mandatory to create datasets.
+
+* Option 1 : Create a dataset by importing a table from a database.
+In the **Datasets** pane within the **Data** section : click on the button at the right of the screen to add a dataset **+ DATASET** and choose a table from an existing database.<br/>
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_15-19-12.png"/>
 </p>
-<p align="center">
-<img src="img/screenshot_from_2021-11-25_15-20-43.png"/>
-</p>
+
+* Option 2 : Create a dataset from an SQL request in the Apache Superset **SQL Lab**.<br/>
+Once the request is done, explore the result and export it as a dataset with the button **EXPLORE** in the toolbar of the results pane.
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-07-58.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-08-30.png"/>
 </p>
+
+Now we can see the list of dataset within the **Datasets** pane in the the **Data** section :
+
 <p align="center">
-<img src="img/screenshot_from_2021-11-25_16-09-23.png"/>
+<img src="img/screenshot_from_2021-11-25_15-20-43.png"/>
 </p>
+
+3. Create a dataset and a chart to visualize the artists with the biggest number of albums :
+
+Write a SQL request to retrieve them and add the result as a dataset.
+Once the dataset created, edit it to configure and create a chart :
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-09-46.png"/>
 </p>
+
+Click on **VISUALIZE TYPE** and select **Bar Chart** :
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-10-14.png"/>
 </p>
+
+Now configure the chart by setting :
+* The metrics as the Number of albums.
+* The series as The name of the artists. 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-10-38.png"/>
 </p>
+
+Visualize the chart and save it by clicking on **+ SAVE** :
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-10-44.png"/>
 </p>
+
+4. Create a pie chart to visualize the distribution of the invoices by countries : 
 <p align="center">
 <img src="img/screenshot_from_2021-11-25_16-11-19.png"/>
 </p>
