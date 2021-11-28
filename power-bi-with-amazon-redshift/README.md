@@ -69,11 +69,19 @@ MPP enables fast execution of the most complex queries operating on large amount
 
 # Practice
 
+We want to install and connect Power BI with the database Amazon Redshift.<br/>
+The purpose is to create charts on Power BI to describe data from the database.<br/>
+The database contains ten tables but we are going to focus on only three of them :
+* **orders** : Orders made by customers to purchase products.
+* **lineitem** : The products that have been involoved in an order.
+* **part** : The manufaturers of the products.
+
 ### Create Redshift database :
 
+The first step is to create a Amazon Redshift cluster to store the data in a scalable relationnal database.<br/>
+The database has been created and data has been loaded into the created tables.<br/>
 
-
-Crédentials for the Amazon Reshift cluster created for the course :
+Credentials for the Amazon Reshift cluster created for the course :
 * m2iadmin
 * M2i12345
 
@@ -81,7 +89,7 @@ Crédentials for the Amazon Reshift cluster created for the course :
 <img src="img/01_screenshot_2021-11-22_redshift.png"/>
 </p>
 
-Make it accessible from outside :
+To make the database accessible from outside :
 
 <p align="center">
 <img src="img/02_screenshot_from_2021-11-23_18-19-13.png"/>
@@ -91,76 +99,45 @@ Make it accessible from outside :
 <img src="img/03_screenshot_from_2021-11-23_18-19-20.png"/>
 </p>
 
-### Connect to an Amazon Redshift database in Power BI Desktop
+### Installing and configuring Power BI Desktop
+
+### Connect Power BI to the Amazon Redshift database in Power BI Desktop
 
 https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
 
-Server :
-> redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439
-
-Database :
-> dev
-
-And use the credentials previously mentionned.
-
-## Let's play with Power BI :
-
 1. Launch Power BI Desktop **As an Administrator**. <br><br>
-2. If you haven’t already, sign in to the Service with your Power BI credentials. <br><br>
-3. Select Home > Get Data > More > Database > Amazon Redshift. <br><br>
-4. Click Connect. <br><br>
-5. On the next screen, provide the following values:  <br><br>
-Server – copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br>
-Database – dev (or whatever name you gave for the database)<br>
-Data Connectivity Mode – DirectQuery<br><br>
-6. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials you provided to the CloudFormation Stack earlier. Type in your Redshift username and password in the popup window and click on Connect.<br><br>  
-7. Select the following tables from the Navigator window and then click **Load**.<br><br>  
-   -  orders
-   -  lineitem
-   -  part <br><br>
-9. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br><br>
-In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br><br> 
-Create relationships between the tables by dragging and dropping the following columns on each other.<br> 
-> o_orderkey = lineitem.l_orderkey<br> 
-> p_partkey = lineitem.l_partkey<br><br>
-9. Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report.<br><br>  
-
-Date Slicer<br/>
-> Visualization type – Slicer<br/>
-> Field – orders.o_orderdate<br/>
-
-Sales by Date by Manufacturer<br/>
-> Visualization type – Line Chart<br/>
-> Axis – orders.o_orderdate<br/>
-> Legend – part.p_mfgr<br/>
-> Values – lineitem.l_extendedprice<br/>
-
-:construction: Pie chart
-
-Order Count<br/>
-> Visualization type – Card<br/>
-> Fields – Count of orders.o_orderkey<br/>
-
-Line Item Count<br/>
-> Visualization type – Card<br/>
-> Fields – Count of lineitem.l_linenumber<br/>
-
-
 <p align="center">
 	<img src="img/2021-11-28_152617.png"/>
 </p>
 
+2. Select Home > Get Data > More > Database > Amazon Redshift. <br><br>
 <p align="center">
 	<img src="img/2021-11-28_152618.png"/>
 </p>
-	
+
+3. Click Connect. <br><br>
+
+4. On the next screen, provide the following values:  <br><br>
+Server : copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br>
+> redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439
+Database : dev (or whatever name you gave for the database)<br>
+> dev
+Data Connectivity Mode – DirectQuery<br><br>
+
 <p align="center">
 	<img src="img/2021-11-28_152619.png"/>
 </p>
 
+5. If this is the first time you’re connecting to this cluster, then you’ll need to type the Redshift credentials provided earlier. Type in your Redshift username and password in the popup window and click on Connect.<br><br>  
+
 <p align="center">
 	<img src="img/2021-11-28_152620.png"/>
 </p>
+
+6. Select the following tables from the Navigator window and then click **Load**.<br><br>  
+   -  orders
+   -  lineitem
+   -  part <br><br>
 
 <p align="center">
 	<img src="img/2021-11-28_152621.png"/>
@@ -170,13 +147,27 @@ Line Item Count<br/>
 	<img src="img/2021-11-28_152622.png"/>
 </p>
 
+7. First, let's discover the data. Switch Power BI to "data" mode in the left toolbar.
+
 <p align="center">
 	<img src="img/2021-11-28_152623.png"/>
 </p>
 
+8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br><br>
+In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br><br> 
+Create relationships between the tables by dragging and dropping the following columns on each other.<br> 
+> o_orderkey = lineitem.l_orderkey<br> 
+> p_partkey = lineitem.l_partkey<br><br>
+
 <p align="center">
 	<img src="img/2021-11-28_152624.png"/>
 </p>
+
+##### Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report :<br><br>  
+
+9. Date Slicer<br/>
+> Visualization type – Slicer<br/>
+> Field – orders.o_orderdate<br/>
 
 <p align="center">
 	<img src="img/2021-11-28_152625.png"/>
@@ -190,9 +181,16 @@ Line Item Count<br/>
 	<img src="img/2021-11-28_152627.png"/>
 </p>
 
+10. Sales by Date by Manufacturer<br/>
+> Visualization type – Line Chart<br/>
+
 <p align="center">
 	<img src="img/2021-11-28_152628.png"/>
 </p>
+
+> Axis – orders.o_orderdate<br/>
+> Legend – part.p_mfgr<br/>
+> Values – lineitem.l_extendedprice<br/>
 
 <p align="center">
 	<img src="img/2021-11-28_152629.png"/>
@@ -206,6 +204,8 @@ Line Item Count<br/>
 	<img src="img/2021-11-28_152631.png"/>
 </p>
 
+11. Orders by ship mode<br/>
+> Visualization type – Pie Chart<br/>
 <p align="center">
 	<img src="img/2021-11-28_152632.png"/>
 </p>
@@ -219,20 +219,21 @@ Line Item Count<br/>
 </p>
 
 <p align="center">
-	<img src="img/2021-11-28_152635.png"/>
+	<img src="img/2021-11-28_152637.png"/>
 </p>
 
 <p align="center">
 	<img src="img/2021-11-28_152636.png"/>
 </p>
 
-<p align="center">
-	<img src="img/2021-11-28_152637.png"/>
-</p>
+12. Order Count<br/>
+> Visualization type – Card<br/>
 
 <p align="center">
 	<img src="img/2021-11-28_152638.png"/>
 </p>
+
+> Fields – Count of orders.o_orderkey<br/>
 
 <p align="center">
 	<img src="img/2021-11-28_152639.png"/>
@@ -242,6 +243,16 @@ Line Item Count<br/>
 	<img src="img/2021-11-28_152640.png"/>
 </p>
 
+13. Line Item Count<br/>
+Same as the step 12 with a different field.
+
+> Visualization type – Card<br/>
+> Fields – Count of lineitem.l_linenumber<br/>
+
+### The final sales Dashboard should look like this :
+
 <p align="center">
 <img src="img/2021-11-27_011640.png"/>
 </p>
+
+ ✔️
