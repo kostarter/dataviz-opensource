@@ -1,4 +1,8 @@
-# Presentation
+# First Part : Presentation
+
+<p align="center">
+<img src="img/overview.png"/>
+</p>
 
 ## Power BI :
 
@@ -67,7 +71,7 @@ Compute nodes are transparent to external applications.
 ###### Massively parallel processing :
 MPP enables fast execution of the most complex queries operating on large amounts of data. Multiple compute nodes handle all query processing leading up to final result aggregation, with each core of each node executing the same compiled query segments on portions of the entire data. Amazon Redshift distributes the rows of a table to the compute nodes so that the data can be processed in parallel.
 
-# Practice
+# Second Part : Practice
 
 We want to install and connect Power BI with the database Amazon Redshift.<br/>
 The purpose is to create charts on Power BI to describe data from the database.<br/>
