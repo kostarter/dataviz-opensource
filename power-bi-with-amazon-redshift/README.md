@@ -107,8 +107,6 @@ To make the database accessible from outside :
 
 ### Connect Power BI to the Amazon Redshift database in Power BI Desktop
 
-https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
-
 1. Launch Power BI Desktop **As an Administrator**. <br><br>
 <p align="center">
 	<img src="img/2021-11-28_152617.png"/>
