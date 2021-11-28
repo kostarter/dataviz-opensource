@@ -1,6 +1,15 @@
-# Apache Superset :
+# Apache Superset
 
-⚠️ Nécessite Python 3.
+Apache Superset is an open-source software cloud-native application for data exploration and data visualization able to handle data at petabyte scale (big data).<br/>
+It is Superset is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple line charts to highly detailed geospatial charts.
+
+<p align="center">
+<img src="https://miro.medium.com/max/2000/1*Duev2soJaO_fMkBWJ4LERw.png"/>
+</p>
+
+## First Part : Install
+
+Apache superset needs Python 3 so firstable, install Miniconda and use its virtual environment.
 
 ```console sbtshell
 conda activate
@@ -35,6 +44,12 @@ superset init
 # To start a development web server on port 8088, use -p to bind to another port
 superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger
 ```
+
+## Part Two : Practice
+
+<p align="center">
+<img src="img/superset.png"/>
+</p>
 
 ### SQLite :
 
