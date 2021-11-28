@@ -9,7 +9,7 @@ It is Superset is fast, lightweight, intuitive, and loaded with options that mak
 
 ## First Part : Install
 
-Apache superset needs Python 3 so firstable, install Miniconda and use its virtual environment.
+Apache Superset needs Python 3 so firstable, install Miniconda and use its virtual environment.
 
 ```console sbtshell
 conda activate
