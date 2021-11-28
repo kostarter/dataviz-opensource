@@ -1,4 +1,6 @@
-# Power BI :
+# Presentation
+
+## Power BI :
 
 Power BI is Microsoft's Business Intelligence and Data Analysis tool.
 It is an indispensable business analytics that facilitates effective visualization and analysis of data.
@@ -18,7 +20,7 @@ A Power BI dashboard is a single page, often called a canvas, that tells a story
 * Query Editor :
 Query Editor is one of the tools in Power BI Desktop that opens in a separate window. In this you can transform data with queries and then create reports with that superior data model into business intelligent tool Power BI Desktop.
 
-### Amazon Redshift :
+## Amazon Redshift :
 
 Fully managed, petabyte-scale data warehouse service in the cloud.
 It is the fastest cloud data warehouse available.
@@ -65,7 +67,11 @@ Compute nodes are transparent to external applications.
 ###### Massively parallel processing :
 MPP enables fast execution of the most complex queries operating on large amounts of data. Multiple compute nodes handle all query processing leading up to final result aggregation, with each core of each node executing the same compiled query segments on portions of the entire data. Amazon Redshift distributes the rows of a table to the compute nodes so that the data can be processed in parallel.
 
+# Practice
+
 ### Create Redshift database :
+
+
 
 Crédentials for the Amazon Reshift cluster created for the course :
 * m2iadmin
@@ -129,6 +135,8 @@ Sales by Date by Manufacturer<br/>
 > Legend – part.p_mfgr<br/>
 > Values – lineitem.l_extendedprice<br/>
 
+:construction: Pie chart
+
 Order Count<br/>
 > Visualization type – Card<br/>
 > Fields – Count of orders.o_orderkey<br/>
@@ -136,6 +144,103 @@ Order Count<br/>
 Line Item Count<br/>
 > Visualization type – Card<br/>
 > Fields – Count of lineitem.l_linenumber<br/>
+
+
+<p align="center">
+	<img src="img/2021-11-28_152617.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152618.png"/>
+</p>
+	
+<p align="center">
+	<img src="img/2021-11-28_152619.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152620.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152621.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152622.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152623.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152624.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152625.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152626.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152627.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152628.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152629.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152630.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152631.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152632.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152633.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152634.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152635.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152636.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152637.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152638.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152639.png"/>
+</p>
+
+<p align="center">
+	<img src="img/2021-11-28_152640.png"/>
+</p>
 
 <p align="center">
 <img src="img/2021-11-27_011640.png"/>
