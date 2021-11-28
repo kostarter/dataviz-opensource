@@ -124,9 +124,11 @@ https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-redshift
 4. On the next screen, provide the following values:  <br><br>
 Server : copy the value of the key [RedshiftClusterEndpoint], which is found in the CloudFormation Stack Outputs tab<br>
 > redshift-cluster-0.c4pfopxdzey3.eu-west-3.redshift.amazonaws.com:5439
+
 Database : dev (or whatever name you gave for the database)<br>
 > dev
-Data Connectivity Mode – DirectQuery<br><br>
+
+Data Connectivity Mode : Import<br><br>
 
 <p align="center">
 	<img src="img/2021-11-28_152619.png"/>
@@ -151,14 +153,14 @@ Data Connectivity Mode – DirectQuery<br><br>
 	<img src="img/2021-11-28_152622.png"/>
 </p>
 
-7. First, let's discover the data. Switch Power BI to "data" mode in the left toolbar.
+7. First, let's discover the data. Switch Power BI to **data** mode in the left toolbar.
 
 <p align="center">
 	<img src="img/2021-11-28_152623.png"/>
 </p>
 
-8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br><br>
-In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br><br> 
+8. Once the data has finished loading, you will need to define table relationships in the in-memory model.<br>
+In Power BI Desktop, change to the Model view by clicking on the “table relationship” icon on the left.<br>
 Create relationships between the tables by dragging and dropping the following columns on each other.<br> 
 > o_orderkey = lineitem.l_orderkey<br> 
 > p_partkey = lineitem.l_partkey<br><br>
@@ -170,13 +172,15 @@ Create relationships between the tables by dragging and dropping the following c
 ##### Now, you are ready to create some charts. Change to Report view and add the following visualizations to the report :<br><br>  
 
 9. Date Slicer<br/>
+First choose the Slicer chart in the **Visualizations** pane as shown in the following screenshot :
 > Visualization type – Slicer<br/>
-> Field – orders.o_orderdate<br/>
 
 <p align="center">
 	<img src="img/2021-11-28_152625.png"/>
 </p>
 
+Then select the field to use for the slicer component :
+> Field – orders.o_orderdate<br/>
 <p align="center">
 	<img src="img/2021-11-28_152626.png"/>
 </p>
