@@ -15,19 +15,19 @@ Apache Superset needs Python 3 so firstable, install Miniconda and use its virtu
 conda activate
 ```
 
-Install gcc on AWS EC2 :
+Install gcc and Apache Superset :
 ```console sbtshell
 sudo yum groupinstall "Development Tools"
 
 pip install apache-superset
 ```
 
-Si erreur :
+You may face an incompatibility error with some Python library, force the update :
 ```console sbtshell
 sudo -H pip install --ignore-installed PyYAML
 ```
 
-Initialisation :
+Initialize Apache Superset environment and credentials :
 ```console sbtshell
 superset db upgrade
 
