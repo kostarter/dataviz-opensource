@@ -178,14 +178,14 @@ The structure of the documents in the index **kibana_sample_data_ecommerce**
 <img src="img/screenshot_from_2021-11-26_14-32-13.png"/>
 </p>
 
-3. Add a chart to show the evolution of the oreders in the time with bar chart.<br/>
+3. Add a chart to show the evolution of the orders in the time with bar chart.<br/>
 
 Create a new chart by clicking on the button **Create visualization** and select the type of the chart **Bar horizontal** :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-32-31.png"/>
 </p>
 
-Select the **Field** to take in account for the chart's horizontal and vertical axis :
+Select the field and the metric to take in account for the chart's horizontal and vertical axis :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-38-21.png"/>
 </p>
@@ -234,24 +234,44 @@ Save the newly created chart, this will add it to the dashboard you've created a
 
 6. Now we want to visualize the distribution of the orders by countries in a map :
 
+* Click on the button to create Map chart.
+* Add a layer of type EMS Boundaries.
+* Select World countries and validate.
+* Set the layer settings (Name, Opacity, Tooltip Field, etc...).
+* Set the join criteria for the countries to highlight.
+* Set the metric to show per country.
+* Configure the chart to display the metric for each country.
+
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_15-02-58.png"/>
+	<img src="img/screenshot_from_2021-11-29_21-57-41.png"/>
 </p>
 
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_15-03-04.png"/>
+	<img src="img/screenshot_from_2021-11-29_21-57-52.png"/>
 </p>
 
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_15-05-33.png"/>
+	<img src="img/screenshot_from_2021-11-29_21-58-01.png"/>
 </p>
 
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_15-05-36.png"/>
+	<img src="img/screenshot_from_2021-11-29_21-58-08.png"/>
 </p>
 
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_15-24-39.png"/>
+	<img src="img/screenshot_from_2021-11-29_21-59-32.png"/>
+</p>
+
+<p align="center">
+	<img src="img/screenshot_from_2021-11-29_21-59-35.png"/>
+</p>
+
+<p align="center">
+	<img src="img/screenshot_from_2021-11-29_21-59-50.png"/>
+</p>
+
+<p align="center">
+	<img src="img/screenshot_from_2021-11-29_22-00-39.png"/>
 </p>
 
 7. Add a chart with the total amount of all the orders :
