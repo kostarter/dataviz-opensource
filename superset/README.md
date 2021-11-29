@@ -7,7 +7,7 @@ It is Superset is fast, lightweight, intuitive, and loaded with options that mak
 <img src="https://miro.medium.com/max/2000/1*Duev2soJaO_fMkBWJ4LERw.png"/>
 </p>
 
-## First Part : Install
+## Part One : Install
 
 Apache Superset needs Python 3 so firstable, install Miniconda and use its virtual environment.
 
