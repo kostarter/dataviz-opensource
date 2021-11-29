@@ -9,14 +9,18 @@
 Kibana is a free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Commonly known as the charting tool for the Elastic Stack (previously referred to as the ELK Stack after Elasticsearch, Logstash, and Kibana), Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack.<br/>
 Developed in 2013 from within the Elasticsearch community, Kibana has grown to become the window into the Elastic Stack itself, offering a portal for users and companies. 
 
-Kibana allows users to realise the operations that can be done via Elasticsearch REST API, searches, aggregations but also to create charts and dashboards. It offers the ability to monitor the cluster.<br/>
+Kibana allows users to realize the operations that can be done via Elasticsearch REST API, searches, aggregations but also to create charts and dashboards. It offers the ability to monitor the cluster.<br/>
+
+<p align="center">
+<img src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt4810b2ec2998fbd6/5ca68a5fce43ee1933311a16/reporting_no_zoom-optimized.gif"/>
+</p>
 
 * **Search, observe, and protect.** From discovering documents to analyzing logs to finding security vulnerabilities, Kibana is your portal for accessing these capabilities and more.
 * **Analyze your data.** Search for hidden insights, visualize what you’ve found in charts, gauges, maps, graphs, and more, and combine them in a dashboard.
 * **Manage, monitor, and secure the Elastic Stack.** Manage your data, monitor the health of your Elastic Stack cluster, and control which users have access to which features.
 
 <p align="center">
-<img src="https://www.elastic.co/guide/en/kibana/7.15/images/addData_sampleDataCards_7.15.0.png"/>
+<img src="https://www.elastic.co/guide/en/kibana/current/images/visualization-journey.png"/>
 </p>
 
 Data analysis is a core functionality of Kibana. Quickly search through large amounts of data, explore fields and values, and then use Kibana’s drag-and-drop interface to rapidly build charts, tables, metrics, and more.
@@ -30,10 +34,6 @@ Data analysis is a core functionality of Kibana. Quickly search through large am
 4. **Model data behavior.** Use Machine learning to model the behavior of your data—forecast unusual behavior and perform outlier detection, regression, and classification analysis.
 
 5. **Share.** Ready to share your findings with a larger audience? Kibana offers many options—embed a dashboard, share a link, export to PDF, and more.
-
-<p align="center">
-<img src="https://www.elastic.co/guide/en/kibana/current/images/visualization-journey.png"/>
-</p>
 
 Most common use cases are :
 * The analysis of the logs of the servers : most common errors, etc...
@@ -100,6 +100,10 @@ Kibana is launched on port 5601 :heavy_check_mark: <br/>
 ### Explore data
 
 We will work on an eCommerce dataset that includes revenue metrics, sentiment analysis, product descriptions and ratings for Elastic clothing apparel.
+
+<p align="center">
+<img src="https://www.elastic.co/guide/en/kibana/7.15/images/addData_sampleDataCards_7.15.0.png"/>
+</p>
 
 Discover displays the data in an interactive histogram that shows the distribution of data, or documents, over time, and a table that lists the fields for each document that matches the index pattern. To view a subset of the documents, you can apply filters to the data, and customize the table to display only the fields you want to explore.
 
