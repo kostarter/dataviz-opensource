@@ -97,89 +97,198 @@ sudo systemctl start kibana.service
 Kibana is launched on port 5601 :heavy_check_mark: <br/>
 > http://EC2_INSTANCE_PUBLIC_IP/5601
 
+### Explore data
+
+We will work on an eCommerce dataset that includes revenue metrics, sentiment analysis, product descriptions and ratings for Elastic clothing apparel.
+
+Discover displays the data in an interactive histogram that shows the distribution of data, or documents, over time, and a table that lists the fields for each document that matches the index pattern. To view a subset of the documents, you can apply filters to the data, and customize the table to display only the fields you want to explore.
+
+* Open the main menu, then click Discover.
+* Change the time filter to Last 7 days.
+
+<p align="center">
+<img src="https://www.elastic.co/guide/en/kibana/7.15/images/tutorial-discover-2.png"/>
+</p>
+
+To view the sales orders for women’s clothing that are $60 or more, use the KQL search field :
+* Change the time filter to Last 30 days.
+* write the following criterias in the KQL (Kibana Query Language) search bar :
+```sql
+  products.taxless_price >= 60 and category : Women's Clothing
+```
+
+The structure of the documents in the index **kibana_sample_data_ecommerce**
+```
+  "category"
+  "currency"
+  "customer_birth_date"
+  "customer_first_name"
+  "customer_full_name"
+  "customer_gender"
+  "customer_id"
+  "customer_last_name"
+  "customer_phone"
+  "day_of_week"
+  "day_of_week_i"
+  "email"
+  "event"
+  "geoip"
+  "manufacturer"
+  "order_date"
+  "order_id"
+  "products"
+    > "_id"
+    > "base_price"
+    > "base_unit_price"
+    > "category"
+    > "created_on"
+    > "discount_amount"
+    > "discount_percentage"
+    > "manufacturer"
+    > "min_price"
+    > "price"
+    > "product_id"
+    > "product_name"
+    > "quantity"
+    > "sku"
+    > "tax_amount"
+    > "taxful_price"
+    > "taxless_price"
+    > "unit_discount_amount"
+  "sku"
+  "taxful_total_price"
+  "taxless_total_price"
+  "total_quantity"
+  "total_unique_products"
+  "type"
+  "user"
+```
+
+1. Go to dashboard pane.
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-32-06.png"/>
 </p>
-<p align="center">
-<img src="img/screenshot_from_2021-11-26_14-32-09.png"/>
-</p>
+
+2. Create a dashboard by clicking on the button **+ Create dashboard**.
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-32-13.png"/>
 </p>
+
+3. Add a chart to show the evolution of the oreders in the time with bar chart.<br/>
+
+Create a new chart by clicking on the button **Create visualization** and select the type of the chart **Bar horizontal** :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-32-31.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-34-35.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-36-31.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-36-43.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-36-57.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-37-02.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-38-21.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-41-11.png"/>
 </p>
+
+4. Split the bars to see the evolution by gender :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-41-18.png"/>
 </p>
+
+5. Show the number of orders in a metric chart :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-42-27.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-42-34.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-42-42.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-58-13.png"/>
 </p>
+
+6. Now we want to visualize the distribution of the orders by countries in a map :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-02-58.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-03-04.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-05-33.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-05-36.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-24-39.png"/>
 </p>
+
+7. Add a chart with the total amount of all the orders :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-32-39.png"/>
 </p>
+
+8. Show the distribution of the products by manufacturers in a Pie chart :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-36-41.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_15-36-56.png"/>
 </p>
+
+9. Add a line chart to show the evolution of the orders' total amount by manufacturer :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-09-42.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-15-45.png"/>
 </p>
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-15-50.png"/>
 </p>
+
+10. Your dashboard should look like this :
+
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-19-43.png"/>
 </p>
 
-
+👍
