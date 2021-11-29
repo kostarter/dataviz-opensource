@@ -185,32 +185,23 @@ Create a new chart by clicking on the button **Create visualization** and select
 <img src="img/screenshot_from_2021-11-26_14-32-31.png"/>
 </p>
 
+Select the **Field** to take in account for the chart's horizontal and vertical axis :
 <p align="center">
-<img src="img/screenshot_from_2021-11-26_14-34-35.png"/>
+<img src="img/screenshot_from_2021-11-26_14-38-21.png"/>
 </p>
 
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-36-31.png"/>
 </p>
 
+Change the date interval :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-36-43.png"/>
 </p>
 
-<p align="center">
-<img src="img/screenshot_from_2021-11-26_14-36-57.png"/>
-</p>
-
+Save the newly created chart, this will add it to the dashboard you've created and get you back to the dashboard :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_14-37-02.png"/>
-</p>
-
-<p align="center">
-<img src="img/screenshot_from_2021-11-26_14-38-21.png"/>
-</p>
-
-<p align="center">
-<img src="img/screenshot_from_2021-11-26_14-41-11.png"/>
 </p>
 
 4. Split the bars to see the evolution by gender :
