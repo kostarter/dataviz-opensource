@@ -235,17 +235,11 @@ Save the newly created chart, this will add it to the dashboard you've created a
 6. Now we want to visualize the distribution of the orders by countries in a map :
 
 * Click on the button to create Map chart.
-* Add a layer of type EMS Boundaries.
-* Select World countries and validate.
-* Set the layer settings (Name, Opacity, Tooltip Field, etc...).
-* Set the join criteria for the countries to highlight.
-* Set the metric to show per country.
-* Configure the chart to display the metric for each country.
-
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-57-41.png"/>
 </p>
 
+* Add a layer of type EMS Boundaries.
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-57-52.png"/>
 </p>
@@ -254,22 +248,27 @@ Save the newly created chart, this will add it to the dashboard you've created a
 	<img src="img/screenshot_from_2021-11-29_21-58-01.png"/>
 </p>
 
+* Select World countries and validate.
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-58-08.png"/>
 </p>
 
+* Set the layer settings (Name, Opacity, Tooltip Field, etc...).
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-59-32.png"/>
 </p>
 
+* Set the join criteria for the countries to highlight.
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-59-35.png"/>
 </p>
 
+* Set the metric to show per country.
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_21-59-50.png"/>
 </p>
 
+* Configure the chart to display the metric for each country.
 <p align="center">
 	<img src="img/screenshot_from_2021-11-29_22-00-39.png"/>
 </p>
@@ -296,6 +295,7 @@ Save the newly created chart, this will add it to the dashboard you've created a
 <img src="img/screenshot_from_2021-11-26_16-09-42.png"/>
 </p>
 
+Like the Bar chart, select field and metric for the horizontal and vertical axis :
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-15-45.png"/>
 </p>
@@ -304,7 +304,9 @@ Save the newly created chart, this will add it to the dashboard you've created a
 <img src="img/screenshot_from_2021-11-26_16-15-50.png"/>
 </p>
 
-10. Your dashboard should look like this :
+10. Add a donut to discover and illustrate which gender buys more.
+
+11. Your dashboard should look like this :
 
 <p align="center">
 <img src="img/screenshot_from_2021-11-26_16-19-43.png"/>
