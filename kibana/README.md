@@ -219,6 +219,10 @@ Create a new chart by clicking on the button **Create visualization** and select
 <img src="img/screenshot_from_2021-11-26_14-41-18.png"/>
 </p>
 
+<p align="center">
+<img src="img/screenshot_2021-11-29_lens-elastic.png"/>
+</p>
+
 5. Show the number of orders in a metric chart :
 
 <p align="center">
